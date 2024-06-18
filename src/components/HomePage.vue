@@ -11,9 +11,9 @@
       navigation
       infinite
     >
-      <q-carousel-slide :name="1" img-src="/public/imagenes/carrusel1.jpg" />
-      <q-carousel-slide :name="2" img-src="/public/imagenes/carrusel2.jpg" />
-      <q-carousel-slide :name="3" img-src="/public/imagenes/carrusel3.jpg" />
+      <q-carousel-slide :name="1" img-src="/imagenes/carrusel1.jpg" />
+      <q-carousel-slide :name="2" img-src="/imagenes/carrusel2.jpg" />
+      <q-carousel-slide :name="3" img-src="/imagenes/carrusel3.jpg" />
     </q-carousel>
   </div>
   <p>
