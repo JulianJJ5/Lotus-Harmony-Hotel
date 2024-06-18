@@ -12,6 +12,9 @@ const myApp = createApp(App)
 
 myApp.use(router)
 
+myApp.use(express.static('public'));
+
+
 myApp.use(Quasar, {
     plugins: {}, 
   })
