@@ -7,7 +7,7 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar size="45px">
-            <img src="/public/imagenes/logo.jpg" id="logo" alt="Hotel Logo">
+            <img src="/imagenes/logo.jpg" id="logo" alt="Hotel Logo">
           </q-avatar>
           Lotus Harmony Hotel
         </q-toolbar-title>
