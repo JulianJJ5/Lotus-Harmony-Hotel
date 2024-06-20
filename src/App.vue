@@ -7,7 +7,7 @@
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar size="45px">
-            <img src="/imagenes/logo.jpg" id="logo" alt="Hotel Logo">
+            <img src="./imagenes/logo.jpg" id="logo" alt="Hotel Logo">
           </q-avatar>
           Lotus Harmony Hotel
         </q-toolbar-title>
@@ -16,9 +16,10 @@
       <q-tabs align="left">
         <q-route-tab to="/" label="Inicio" />
         <q-route-tab to="/habitaciones" label="Habitaciones" />
-        <q-route-tab to="/contacto" label="Contacto" />
-        <q-route-tab to="/deportes-extremos" label="Deportes Extremos" />
         <q-route-tab to="/servicios" label="Servicios" />
+        <q-route-tab to="/deportes-extremos" label="Deportes Extremos" />
+        <q-route-tab to="/contacto" label="Contacto" />
+
       </q-tabs>
     </q-header>
 
@@ -26,7 +27,7 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white">
+    <q-footer elevated class="bg-grey-8 text-white" id="footer">
       <q-toolbar>
         <q-toolbar-title>
           <q-avatar>
@@ -42,5 +43,12 @@
 <style>
 #logo{
   width: 120%;
+}
+
+#footer{
+  position: sticky;
+  bottom: -100px;
+  transform: translate(-5%, 45%);
+  width: 111%;
 }
 </style>

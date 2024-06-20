@@ -1,26 +1,51 @@
 <template>
-    <q-page>
-      <div class="q-pa-md">
-        <h2>Servicios</h2>
-        <q-list>
-          <q-item v-for="(servicio, index) in servicios" :key="index">
-            <q-item-section>
-              <q-item-label>{{ servicio.nombre }}</q-item-label>
-              <q-item-label caption>{{ servicio.descripcion }}</q-item-label>
-            </q-item-section>
-          </q-item>
-        </q-list>
-      </div>
-    </q-page>
-  </template>
-  
-  <script setup>
-  import { ref } from 'vue'
-  
-  const servicios = ref([
-    { nombre: 'Piscina', descripcion: 'Disfruta de nuestra piscina climatizada.' },
-    { nombre: 'Restaurante', descripcion: 'Gastronomía gourmet a tu disposición.' },
-    { nombre: 'Spa', descripcion: 'Relájate con nuestros tratamientos de spa.' }
-  ])
-  </script>
-  
+  <div class="q-pa-md items-start q-gutter-md">
+    <div class="grid-container">
+      <q-card v-for="(servicio, index) in servicios" :key="index" class="my-card">
+        <q-img :src="servicio.imagen">
+          <div class="absolute-bottom text-subtitle2 text-center">
+            {{ servicio.nombre }}
+          </div>
+        </q-img>
+
+        <q-card-section>
+          <p>{{ servicio.descripcion }}</p>
+        </q-card-section>
+      </q-card>
+    </div>
+  </div>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+
+const servicios = ref([
+  {
+    nombre: 'RESTAURANTE',
+    descripcion: 'Nuestro restaurante te ofrece una experiencia culinaria excepcional, con platos elaborados con ingredientes frescos y locales. Disfruta de una amplia variedad de menús para satisfacer todos los gustos y paladares.',
+    imagen: './imagenes/restaurante.webp'
+  },
+  {
+    nombre: 'SPA',
+    descripcion: 'Relájate y rejuvenece en nuestro spa de lujo, donde podrás disfrutar de una amplia gama de tratamientos faciales, corporales y masajes terapéuticos. Déjate mimar por nuestro personal experto en un entorno tranquilo y sereno.',
+    imagen: './imagenes/spa.jpg'
+  },
+  {
+    nombre: 'PISCINA',
+    descripcion: 'Sumérgete en la frescura de nuestra piscina al aire libre, rodeada de exuberantes jardines y vistas panorámicas. Disfruta de un día soleado con bebidas refrescantes y servicio de snacks mientras te relajas junto a la piscina.',
+    imagen: './imagenes/piscina.jpg'
+  }
+])
+</script>
+
+<style scoped>
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
+  gap: 20px; /* Espacio entre las tarjetas */
+}
+
+.my-card {
+  /* Estilos adicionales para las tarjetas si es necesario */
+}
+</style>

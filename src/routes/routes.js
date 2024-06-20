@@ -9,9 +9,10 @@ import ServiciosPage from '../components/ServiciosPage.vue'
 const routes = [
     { path: '/', component: HomePage },
     { path: '/habitaciones', component: HabitacionesPage },
-    { path: '/contacto', component: ContactoPage },
-    { path: '/deportes-extremos', component: DeportesExtremosPage },
     { path: '/servicios', component: ServiciosPage },
+    { path: '/deportes-extremos', component: DeportesExtremosPage },
+    { path: '/contacto', component: ContactoPage },
+
   ]
 
 export const router = createRouter({

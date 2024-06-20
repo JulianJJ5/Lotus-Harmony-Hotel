@@ -11,15 +11,17 @@
       navigation
       infinite
     >
-      <q-carousel-slide :name="1" img-src="/imagenes/carrusel1.jpg" />
-      <q-carousel-slide :name="2" img-src="/imagenes/carrusel2.jpg" />
-      <q-carousel-slide :name="3" img-src="/imagenes/carrusel3.jpg" />
+      <q-carousel-slide :name="1" img-src="./../imagenes/carrusel1.jpg" />
+      <q-carousel-slide :name="2" img-src="./../imagenes/carrusel2.jpg" />
+      <q-carousel-slide :name="3" img-src="./../imagenes/carrusel3.jpg" />
     </q-carousel>
   </div>
   <p>
+
         Disfruta de una experiencia única y acogedora en nuestro hotel, donde encontrarás servicios de alta calidad y un entorno encantador.
       </p>
-      <q-btn color="primary" label="Explorar más" @click="$router.push('/servicios')" />
+      
+      <q-btn color="primary" label="Explorar más" @click="$router.push('/deportes-extremos')" />
     </div>
   
 
@@ -31,10 +33,13 @@ import { ref } from 'vue'
 export default {
   setup () {
     return {
-      slide: ref(1)
+      slide: ref(1),
+      autoplay: ref(false)
+
     }
   }
 }
+
 </script>
 
 
