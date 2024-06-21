@@ -8,6 +8,7 @@ import 'quasar/src/css/index.sass'
 import App from './App.vue'
 import './style.css'
 
+import 'leaflet/dist/leaflet.css'
 const myApp = createApp(App)
 
 myApp.use(router)

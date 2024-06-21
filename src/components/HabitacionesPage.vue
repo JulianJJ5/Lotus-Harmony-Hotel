@@ -15,14 +15,6 @@
       <q-carousel-slide :name="3" img-src="/imagenes/carruselHabitacion3.jpg" />
 
       <template v-slot:control>
-        <q-carousel-control
-          position="top-right"
-          :offset="[18, 18]"
-          class="text-white rounded-borders"
-          style="background: rgba(0, 0, 0, .3); padding: 4px 8px;"
-        >
-          <q-toggle dense dark color="orange" v-model="autoplay" label="Auto Play" />
-        </q-carousel-control>
 
         <q-carousel-control
           position="bottom-right"
@@ -42,7 +34,7 @@
     </q-carousel>
   </div>
 
-<h1>HABITACIONES & SUITES</h1>
+<h1 class="underline">HABITACIONES & SUITES</h1>
 
   <div class="q-pa-md items-start q-gutter-md">
     <div class="grid-container">
@@ -127,24 +119,55 @@ const habitaciones = ref([
   }
 ])
 
+
 const slide = ref(0);
 const autoplay = ref(true);
 
 if (autoplay.value) {
-  setInterval(() => {
+  let slideInterval; //guardar el intervalo de slide
+  // inicializar el intervalo usando`setTimeout`
+  slideInterval = setTimeout(() => {
     slide.value = (slide.value + 1) % habitaciones.value.length;
-  }, 3000); // Cambia de slide cada 3 segundos
+    // Iniciar el siguiente intervalo despues del tiempo especificado
+    slideInterval = setTimeout(() => {
+      // Repetir la logica de actualizacion del slide
+      slide.value = (slide.value + 1) % habitaciones.value.length;
+    }, 3000);
+  }, 3000);
 }
 
 const reservar = () => {
 }
 </script>
 
-<style scoped>
+<style>
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
   gap: 20px; 
+}
+
+    .underline {
+      position: relative;
+      display: inline-block;
+    }
+
+    .underline::after {
+      content: '';
+      position: absolute;
+      border-radius: 15px;
+      left: 50%; /* Centra el subrayado horizontalmente */
+      bottom: -10px; /* Ajusta la posición vertical del subrayado */
+      width: 80%; /* Ancho del subrayado */
+      height: 5px; /* Grosor del subrayado */
+      background-color: rgb(216, 184, 2); /* Color del subrayado */
+      transform: translateX(-50%); /* Mueve el subrayado al centro del elemento */
+    }
+
+  .grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
 }
 
 </style>

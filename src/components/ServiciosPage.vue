@@ -23,7 +23,7 @@ const servicios = ref([
   {
     nombre: 'RESTAURANTE',
     descripcion: 'Nuestro restaurante te ofrece una experiencia culinaria excepcional, con platos elaborados con ingredientes frescos y locales. Disfruta de una amplia variedad de menús para satisfacer todos los gustos y paladares.',
-    imagen: './imagenes/restaurante.webp'
+    imagen: './imagenes/restaurante.jpg'
   },
   {
     nombre: 'SPA',
@@ -35,17 +35,10 @@ const servicios = ref([
     descripcion: 'Sumérgete en la frescura de nuestra piscina al aire libre, rodeada de exuberantes jardines y vistas panorámicas. Disfruta de un día soleado con bebidas refrescantes y servicio de snacks mientras te relajas junto a la piscina.',
     imagen: './imagenes/piscina.jpg'
   }
-])
+]);
+
 </script>
 
 <style scoped>
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Tres columnas iguales */
-  gap: 20px; /* Espacio entre las tarjetas */
-}
 
-.my-card {
-  /* Estilos adicionales para las tarjetas si es necesario */
-}
 </style>

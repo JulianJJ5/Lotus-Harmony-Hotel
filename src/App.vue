@@ -2,6 +2,7 @@
 </script>
 
 <template>
+  <div id="contenedor">
   <q-layout view="hHh lpR fff">
     <q-header elevated class="bg-dark text-white" height-hint="98">
       <q-toolbar>
@@ -27,28 +28,35 @@
       <router-view />
     </q-page-container>
 
-    <q-footer elevated class="bg-grey-8 text-white" id="footer">
-      <q-toolbar>
-        <q-toolbar-title>
-          <q-avatar>
-            <img src="https://cdn.quasar.dev/logo-v2/svg/logo-mono-white.svg" alt="Hotel Logo">
-          </q-avatar>
-          <div>© 2024 Hotel. Todos los derechos reservados.</div>
-        </q-toolbar-title>
-      </q-toolbar>
-    </q-footer>
+
   </q-layout>
+  </div>
 </template>
 
 <style>
+.q-header{
+position: sticky;
+top: -4%;
+width: 111%;
+transform: translate(-5%, -33%);
+}
+
 #logo{
   width: 120%;
+}
+
+#app{
+  width: 100%;
+}
+
+#contenedor{
+  width: 100%;
 }
 
 #footer{
   position: sticky;
   bottom: -100px;
-  transform: translate(-5%, 45%);
-  width: 111%;
+  transform: translate(-8.3%, 45%);
+  width: 120%;
 }
 </style>
